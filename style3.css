@@ -1,0 +1,362 @@
+:root {
+    --first-color: hsl(82,60%,28%);
+    --title-color: hsl(0,0%,15%);
+    --text-color: hsl(0,0%,35%);
+    --body-color: hsl(0,0%,95%);
+    --container-color: hsl(0,0%,100%);
+    --body-font:'Josefin Sans', sans-serif;
+    --h2-font-size: 1.25rem;
+    --small-font-size: 0.813rem;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.logo{
+    height: 6rem;
+    width: auto;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #191919;
+    color: var(--text-color);
+}
+
+img{
+    display: block;
+    width: auto;
+    height: 14rem;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.container h1{
+    color: #f9004d;
+    font-size: 5rem;
+}
+
+.card__container{
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.card__article{
+    position: relative;
+    overflow: hidden;
+}
+
+.card__img{
+    width: 328px;
+    border-radius: 1.5rem;
+}
+
+.card__data{
+    width: 280px;
+    background-color: #191919;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+.card__description{
+    display: block;
+    font-size: .813rem;
+    margin-bottom: .25rem;
+    color: #fcfc;
+}
+
+.card__title{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: .75rem;
+}
+
+.card__button{
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: #f9004d;
+}
+
+.card__button:hover{
+    text-decoration: underline;
+}
+
+/* animations */
+
+.card__button:hover{
+    text-decoration: underline;
+}
+
+.card__article:hover .card__data{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.card__article:hover{
+    animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data{
+    animation: remove-data 1s forwards;
+}
+
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem);
+    }
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(0.5rem);
+    }
+}
+
+@keyframes show-overflow{
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+
+/*breakpoints*/
+
+@media screen and (max-width: 340px){
+    .container{
+        margin-inline: 1rem;
+    }
+
+    .card__data{
+        width: 250px;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .card__container{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width:1120px){
+    .container{
+        height: 100vh;
+    }
+
+    .card__container{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .card__img{
+        width: 348px;
+    }
+
+    .card__data{
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: .3s;
+}
+.navbar a:hover::before {
+    width: 100%;
+}
+footer {
+    background-color: #191919;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #f9004d;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: white;
+    opacity: 0.9;
+}
+.socialIcons a:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: #f9004d;
+    transition: 0.5s;
+}
+.footerbottom{
+    padding: 20px;
+    text-align: center;
+    justify-content: center
+}
+.footerbottom p{
+    color: white;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+}
+.footerNav ul a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: 0,5s;
+}
+.footer ul a:hover{
+    color: #f9004d;
+}
+/* ... your existing styles ... */
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  
+  .modal-content {
+    background-color: #191919; /* Set background color */
+    margin: 5% auto;
+    padding: 20px;
+    border: 2px solid red; /* Add red outline */
+    width: 50%;
+    color: white; /* Optional: Change text color to white for better visibility */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* You may also want to adjust the close button color for better visibility */
+.close {
+    font-size: 40px; /* Larger close button */
+    color: white;
+    padding: 5px; /* Add padding for easier clicking */
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f9004d; /* Change color on hover/focus */
+}
+
+.modal-title {
+    margin-bottom: 20px; /* Space between title and description */
+    color: white; /* Assuming a dark modal background */
+}
+
+.modal-description {
+    flex-basis: 45%; /* Adjusted to balance with images */
+    /* Additional styles for text alignment and spacing */
+    color: white;
+}
+
+.modal-header {
+    text-align: center;
+}
+
+.modal-body {
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.modal-images {
+    flex-basis: 45%; /* Adjusted to create space */
+    margin-right: 20px; /* Space between images and description */
+}

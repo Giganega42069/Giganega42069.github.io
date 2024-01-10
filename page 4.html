@@ -4,50 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>page 4</title>
-    <link rel="stylesheet" href="style2.css">
+    <title>page 2</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="main.js"></script>
 </head>
-
 <body>
-    <div class="title">
-        <h1>Title<span> 3</span></h1>
-        <a href="https://giganega42069.github.io/#workingz">Back</a>
-    </div>
+    <header class="header">
+        <a onclick="scrollToDiv('home');" class="logo"><img src="images/Portfolio logo.png" alt="logo" style="height: 8rem;"></a>
+        <nav class="navbar">
+            <a href="https://giganega42069.github.io/#home">Home</a>
+            <a href="https://giganega42069.github.io/#aboutme"">About</a>
+            <a href="https://giganega42069.github.io/#workingz">Work</a>
+            <a href="https://giganega42069.github.io/#contacting"">Contact</a>
+        </nav>
+    </header>
+
     <div class="container">
-        
-        <div class="content-section">
-            <div class="card">
-                <img src="images/capybara1.jpg" alt="">
-                <h2>Card one</h2>
-                <p>Project numeber 1 yo</p>
-            </div>
-            <div class="card">
-                <img src="images/capybara2.jpg" alt="">
-                <h2>Card two</h2>
-                <p>Project numeber 2 yo</p>
-            </div>
-            <div class="card">
-                <img src="images/capybara3.jpg" alt="">
-                <h2>Card three</h2>
-                <p>Project numeber 3 yo</p>
-            </div>
-            <div class="card">
-                <img src="images/capybara1.jpg" alt="">
-                <h2>Card four</h2>
-                <p>Project numeber 4 yo</p>
-            </div>
-            <div class="card">
-                <img src="images/capybara5.jpg" alt="">
-                <h2>Card five</h2>
-                <p>Project numeber 5 yo</p>
-            </div>
+        <h1>Others</h1>
+        <div class="card__container">
+
+            <article class="card__article">
+                <img src="images/Project 1.1.jpeg" alt="" class="card__img">
+                <div class="card__data">
+                    <span class="card__description">Javascript</span>
+                    <h2 class="card__title">Project</h2>
+                    <a href="" class="card__button">Read more</a>
+                    
+                </div>
+                <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="modal-title">Project Title 1</h2>
+                            <p class="modal-description">Project Description...</p>
+                        </div>
+                    </div>
+            </article>
+
+            <article class="card__article">
+                <img src="images/Project 2.1.jpeg" alt="" class="card__img">
+                <div class="card__data">
+                    <span class="card__description">Javascript</span>
+                    <h2 class="card__title">Project</h2>
+                    <a href="" class="card__button">Read more</a>
+                    
+                </div>
+                <div id="modal2" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="modal-title">Project Title 2</h2>
+                            <p class="modal-description">Project Description...</p>
+                        </div>
+                    </div>
+            </article>
+
+            <article class="card__article">
+                <img src="images/Project 3.1.jpeg" alt="" class="card__img">
+                <div class="card__data">
+                    <span class="card__description">Javascript</span>
+                    <h2 class="card__title">Project</h2>
+                    <a href="" class="card__button">Read more</a>
+                    
+                </div>
+                <div id="modal3" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="modal-title">Project Title 3</h2>
+                            <p class="modal-description">Project Description...</p>
+                        </div>
+                    </div>
+            </article>
+
+            <article class="card__article">
+                <img src="images/Project 4.1.jpeg" alt="" class="card__img">
+                <div class="card__data">
+                    <span class="card__description">Javascript</span>
+                    <h2 class="card__title">Project</h2>
+                    <a href="" class="card__button">Read more</a>
+                </div>
+                <div id="modal4" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="modal-title">Project Title 4</h2>
+                            <p class="modal-description">Project Description...</p>
+                        </div>
+                    </div>
+            </article>
+
+            <article class="card__article">
+                <img src="images/Project 1.2.jpeg" alt="" class="card__img">
+                <div class="card__data">
+                    <span class="card__description">Javascript</span>
+                    <h2 class="card__title">Project</h2>
+                    <a href="" class="card__button">Read more</a>
+                </div>
+                <div id="modal5" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 class="modal-title">Project Title 5</h2>
+                        <p class="modal-description">Project Description...</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card__article">
+                <img src="images/Project 2.2.jpeg" alt="" class="card__img">
+                <div class="card__data">
+                    <span class="card__description">Javascript</span>
+                    <h2 class="card__title">Project</h2>
+                    <a href="" class="card__button">Read more</a>
+                </div>
+                <div id="modal6" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 class="modal-title">Project Title 6</h2>
+                        <p class="modal-description">Project Description...</p>
+                    </div>
+                </div>
+            </article>
+
         </div>
     </div>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap"
-        rel="stylesheet">
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <a href="https://giganega42069.github.io/#home">Home</a>
+                    <a href="https://giganega42069.github.io/#aboutme"">About</a>
+                    <a href="https://giganega42069.github.io/#workingz">Work</a>
+                    <a href="https://giganega42069.github.io/#contacting"">Contact</a>
+                </ul>
+            </div>
+        </div>
+        <div class="footerbottom">
+                <p>Copyright &copy;2024 Designed by <span class="designer">Ibnu</span></p>
+        </div>
+    </footer>
 </body>
 
 </html>

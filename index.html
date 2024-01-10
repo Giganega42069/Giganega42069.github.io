@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <div class="container" id="home">
         <header class="header">
-            <a onclick="scrollToDiv('home');" class="logo"><img src="images/cat.png" alt="mars" height="100px"
-                    width="100px"></a>
+            <a onclick="scrollToDiv('home');" class="logo"><img src="images/Portfolio logo.png" alt="logo"
+                    height="100px" width="100px"></a>
             <nav class="navbar">
                 <a onclick="scrollToDiv('home');">Home</a>
                 <a onclick="scrollToDiv('aboutme');">About</a>
@@ -71,14 +71,12 @@
 
     <section class="about" id="aboutme">
         <div class="box">
-            <img src="images/sukuna.png" alt="pic of me">
+            <img src="images/Pic of me.jpeg" alt="pic of me">
             <div class="abouttext">
                 <h1>About Me</h1>
                 <h5>Developer <span class="abouttitle">& Designer</span></h5>
-                <p>I am a front-end web developer student based in republic polytechnic.
-                    I am currently in year 2 and i aspire to be a web developer in the
-                    future creating beautiful websites. Not only just that, designing the
-                    website and coding it is very fun and I can consider it as my passion.
+                <p>I'm a 2nd year student in Republic Polytechnic learning front-end development.
+                    My passion is to create and design websites, as such those are my future aspirations.
                 </p>
                 <button type="button" onclick="scrollToDiv('workingz');">See my Work</button>
             </div>
@@ -97,25 +95,11 @@
                             <ion-icon name="code-slash-outline"></ion-icon>
                         </div>
                         <div class="description">
-                            <h3>Front-end Projects</h3>
+                            <h3>Development Projects</h3>
                             <p>The projects are created through
-                                front end tools and application
+                                programming languages
                             </p>
                             <a href="page 2.html">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="boxes" style="--clr:#00c8ff;">
-                    <div class="things">
-                        <div class="icon">
-                            <ion-icon name="code-download-outline"></ion-icon>
-                        </div>
-                        <div class="description">
-                            <h3>Back-end Projects</h3>
-                            <p>The projects are created through
-                                back end tools and application
-                            </p>
-                            <a href="page 3.html">See More</a>
                         </div>
                     </div>
                 </div>
@@ -127,7 +111,21 @@
                         <div class="description">
                             <h3>Design and Artwork</h3>
                             <p>The projects are created through
-                                front end tools and application
+                                Adobe Applications
+                            </p>
+                            <a href="page 3.html">See More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxes" style="--clr:#00c8ff;">
+                    <div class="things">
+                        <div class="icon">
+                            <ion-icon name="code-download-outline"></ion-icon>
+                        </div>
+                        <div class="description">
+                            <h3>Others</h3>
+                            <p>The projects are created through
+                                unrelated applications
                             </p>
                             <a href="page 4.html">See More</a>
                         </div>
@@ -153,9 +151,31 @@
         </div>
 
         <div class="contact-img">
-            <img src="images/sukuna.png" alt="placeholder">
+            <img src="images/Pic of me.jpeg" alt="placeholder">
         </div>
     </section>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                <a onclick="scrollToDiv('home');">Home</a>
+                <a onclick="scrollToDiv('aboutme');">About</a>
+                <a onclick="scrollToDiv('workingz');">Work</a>
+                <a onclick="scrollToDiv('contacting');">Contact</a>
+                </ul>
+            </div>
+        </div>
+        <div class="footerbottom">
+                <p>Copyright &copy;2024 Designed by <span class="designer">Ibnu</span></p>
+        </div>
+    </footer>
 
     <script>
         function scrollToDiv(targetId) {
@@ -166,7 +186,7 @@
     <script type="text/javascript">
 
         // List of sentences
-        var _CONTENT = ["Hello I am Ibnu", "I love cats and woman", "I aspire to be a web developer", "Welcome to my portfolio", "Enjoy :)"];
+        var _CONTENT = ["Hello I am Ibnu", "I am a year 2 student in Republic Polytechnic", "I aspire to be a web developer", "Welcome to my portfolio", "Enjoy :)"];
 
         // Current sentence being processed
         var _PART = 0;
@@ -215,12 +235,12 @@
                 // Start to display the next sentence after some time
                 setTimeout(function () {
                     _INTERVAL_VAL = setInterval(Type, 50);
-                }, 200);
+                }, 100);
             }
         }
 
         // Start the typing effect on load
-        _INTERVAL_VAL = setInterval(Type, 100);
+        _INTERVAL_VAL = setInterval(Type, 25);
     </script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

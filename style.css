@@ -411,3 +411,59 @@ span{
 .navbar a:hover::before {
     width: 100%;
 }
+footer {
+    background-color: #191919;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #f9004d;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: white;
+    opacity: 0.9;
+}
+.socialIcons a:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: #f9004d;
+    transition: 0.5s;
+}
+.footerbottom{
+    padding: 20px;
+    text-align: center;
+    justify-content: center
+}
+.footerbottom p{
+    color: white;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+}
+.footerNav ul a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: 0,5s;
+}
+.footer ul a:hover{
+    color: #f9004d;
+}
