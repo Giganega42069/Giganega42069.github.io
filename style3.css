@@ -45,6 +45,8 @@ img{
 .container h1{
     color: #f9004d;
     font-size: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .card__container{
@@ -238,6 +240,7 @@ img{
 }
 footer {
     background-color: #191919;
+    padding-top: 5rem;
 }
 .footerContainer{
     width: 100%;
