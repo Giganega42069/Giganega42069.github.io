@@ -313,6 +313,7 @@ footer {
   }
   
   .modal-content {
+    border-radius: 3%;
     background-color: #191919; /* Set background color */
     margin: 5% auto;
     padding: 20px;

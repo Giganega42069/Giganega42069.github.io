@@ -141,11 +141,11 @@
             <p>I am available for internship. Connect with me via phone: 65 96412102
                 or email: 22004686@myrp.edu.sg
             </p>
-            <form action="">
-                <input type="" placeholder="Your Name" required>
-                <input type="email" name="email" id="" placeholder="E-mail" required>
-                <input type="" placeholder="Write a Subject" required>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <form action="" class="contact-form">
+                <input type="" placeholder="Your Name" required id="from_name">
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <input type="" placeholder="Write a Subject" required id="subject">
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" name="" value="Submit" class="btn">
             </form>
         </div>
@@ -242,6 +242,32 @@
         // Start the typing effect on load
         _INTERVAL_VAL = setInterval(Type, 25);
     </script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("Wu4lIZiwudiO-HVUz");
+    })();
+
+    document.querySelector('.contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var params = {
+            from_name: document.getElementById('from_name').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+
+        emailjs.send('service_q9nngvk', 'template_jnnevsd', params)
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Your message has been sent!');
+            }, function (error) {
+                console.log('FAILED...', error);
+            });
+    });
+</script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
